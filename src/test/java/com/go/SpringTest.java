@@ -96,7 +96,7 @@ public class SpringTest {
 
         /*******************/
         String name = "Jack";
-        List<User> users7 = userMapper.getNeme(name);
+        List<User> users7 = userMapper.getName(name);
         System.out.println("自定义mapper查询："+ JSON.toJSONString(users7));
 
     }
