@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.go.demo.dao.UserMapper">
 <!--获取名称-->
-<select id="getName" parameterType="java.lang.String" resultType="com.go.demo.dao.domain.User">
+<select id="listByName" parameterType="java.lang.String" resultType="com.go.demo.dao.domain.User">
     select name from user where name=#{name}
 </select>
 </mapper>

@@ -10,5 +10,5 @@ public interface UserMapper extends BaseMapper<User> {
     /**
      * 根据名字查询数据
      */
-    List<User> getName(@Param("name") String name);
+    List<User> listByName(@Param("name") String name);
 }

@@ -7,6 +7,7 @@ import com.go.demo.ApplicationDemo;
 import com.go.demo.common.utils.DateFormatUtils;
 import com.go.demo.dao.UserMapper;
 import com.go.demo.dao.domain.User;
+import com.go.demo.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,6 +24,9 @@ public class SpringTest {
 
     @Resource
     private UserMapper userMapper;
+
+    @Resource
+    private UserService userService;
 
     @Test
     public void testSelect() throws ParseException {
@@ -96,8 +100,12 @@ public class SpringTest {
 
         /*******************/
         String name = "Jack";
-        List<User> users7 = userMapper.getName(name);
+        List<User> users7 = userMapper.listByName(name);
         System.out.println("自定义mapper查询："+ JSON.toJSONString(users7));
+
+        /*******************/
+        List<User> users8 = userService.listByName(name);
+        System.out.println("生成Service使用："+ JSON.toJSONString(users8));
 
     }
 }
