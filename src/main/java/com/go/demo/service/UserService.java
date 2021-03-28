@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface UserService extends IService<User> {
 
-    List<User> listByName(String name);
+    List<User>  listByName(String name);
 }
