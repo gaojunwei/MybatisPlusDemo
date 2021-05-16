@@ -1,7 +1,7 @@
 package com.go.demo.runner;
 
-import com.alibaba.fastjson.JSON;
 import com.go.demo.config.SysConfig;
+import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.Ordered;
@@ -25,6 +25,8 @@ public class HighOrderCommandLineRunner implements CommandLineRunner, Ordered {
 
     @Resource
     private SysConfig sysConfig;
+    @Resource
+    private Gson gson;
 
     @Override
     public void run(String... args) {

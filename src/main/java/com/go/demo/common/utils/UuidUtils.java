@@ -1,5 +1,6 @@
 package com.go.demo.common.utils;
 
+import java.nio.charset.Charset;
 import java.util.UUID;
 
 /**
@@ -19,7 +20,7 @@ public class UuidUtils {
      */
     public static synchronized String getUUID(String str) {
         if (str != null && !str.trim().equals("")) {
-            UUID uuid = UUID.nameUUIDFromBytes(str.getBytes());
+            UUID uuid = UUID.nameUUIDFromBytes(str.getBytes(Charset.forName("utf-8")));
             return uuid.toString().replace("-", "");
         } else {
             return "";
