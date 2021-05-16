@@ -22,6 +22,20 @@ public enum SystemCodeEnums {
         result.setMsg(this.getMsg());
     }
 
+    public BasicResult applyVal(String msg){
+        BasicResult result = new BasicResult();
+        result.setCode(this.getCode());
+        result.setMsg(msg);
+        return result;
+    }
+
+    public BasicResult applyVal(){
+        BasicResult result = new BasicResult();
+        result.setCode(this.getCode());
+        result.setMsg(this.getMsg());
+        return result;
+    }
+
     public String getCode() {
         return code;
     }
